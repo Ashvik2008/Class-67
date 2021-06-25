@@ -1,0 +1,200 @@
+
+C:\Users\buzzt>cd Desktop
+
+C:\Users\buzzt\Desktop>cd Class 67
+
+C:\Users\buzzt\Desktop\Class 67>cd MyStory
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Character.txt
+        new file:   Story.txt
+
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git commit -m "MyFirstCommit"
+[master (root-commit) 11ff5fa] MyFirstCommit
+ 2 files changed, 3 insertions(+)
+ create mode 100644 Character.txt
+ create mode 100644 Story.txt
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git log
+commit 11ff5fa75c3262a26e83d7808ddb408eb25e6b82 (HEAD -> master)
+Author: Ashvik2008 <ashvikvijay2008@gmail.com>
+Date:   Fri Jun 25 18:15:13 2021 +0530
+
+    MyFirstCommit
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Story.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git add Story.txt
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git commit -m "MySecondCommit"
+[master 7076233] MySecondCommit
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git log
+commit 7076233811d12c595ed50f854aba96d06730795b (HEAD -> master)
+Author: Ashvik2008 <ashvikvijay2008@gmail.com>
+Date:   Fri Jun 25 18:17:44 2021 +0530
+
+    MySecondCommit
+
+commit 11ff5fa75c3262a26e83d7808ddb408eb25e6b82
+Author: Ashvik2008 <ashvikvijay2008@gmail.com>
+Date:   Fri Jun 25 18:15:13 2021 +0530
+
+    MyFirstCommit
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git checkout
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git checkout 11ff5
+Note: switching to '11ff5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 11ff5fa MyFirstCommit
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git checkout 70762
+Previous HEAD position was 11ff5fa MyFirstCommit
+HEAD is now at 7076233 MySecondCommit
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git status
+HEAD detached at 7076233
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Story.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git add Story.txt
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git diff
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git diff
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git dif
+git: 'dif' is not a git command. See 'git --help'.
+
+The most similar commands are
+        diff
+        config
+        difftool
+        init
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git commit -m "MyThirdCommit"
+[detached HEAD 9e5d12f] MyThirdCommit
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git branch
+* (HEAD detached from 7076233)
+  master
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git branch branch2
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git branch
+* (HEAD detached from 7076233)
+  branch2
+  master
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git checkout branch2
+Switched to branch 'branch2'
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git log
+commit 9e5d12f9004bdeeef54ded42425262109e20c1e8 (HEAD -> branch2)
+Author: Ashvik2008 <ashvikvijay2008@gmail.com>
+Date:   Fri Jun 25 18:21:49 2021 +0530
+
+    MyThirdCommit
+
+commit 7076233811d12c595ed50f854aba96d06730795b (master)
+Author: Ashvik2008 <ashvikvijay2008@gmail.com>
+Date:   Fri Jun 25 18:17:44 2021 +0530
+
+    MySecondCommit
+
+commit 11ff5fa75c3262a26e83d7808ddb408eb25e6b82
+Author: Ashvik2008 <ashvikvijay2008@gmail.com>
+Date:   Fri Jun 25 18:15:13 2021 +0530
+
+    MyFirstCommit
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git status
+On branch branch2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Story.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git add Story.txt
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git commit -m "MyFourthCommit"
+[branch2 d1d954a] MyFourthCommit
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git diff master branch2
+diff --git a/Story.txt b/Story.txt
+index 036f34d..4fc59ed 100644
+--- a/Story.txt
++++ b/Story.txt
+@@ -1,3 +1,7 @@
+ Once upon a time, a clever monkey lived in a tree that bore juicy, red rose apples. He was very happy. One fine day, a crocodile swam up to that tree and told the monkey that he had traveled a long distance and was in search of food as he was very hungry. The kind monkey offered him a few rose apples. The crocodile enjoyed them very much and asked the monkey whether he could come again for some more fruit. The generous monkey happily agreed.
+
+-The crocodile returned the next day. And the next. And the next one after that. Soon the two became very good friends. They discussed their lives, their friends and family, like all friends do. The crocodile told the monkey that he had a wife and that they lived on the other side of the river. So the kind monkey offered him some extra rose apples to take home to his wife. The crocodile’s wife loved the rose apples and made her husband promise to get her some every day.
+\ No newline at end of file
++The crocodile returned the next day. And the next. And the next one after that. Soon the two became very good friends. They discussed their lives, their friends and family, like all friends do. The crocodile told the monkey that he had a wife and that they lived on the other side of the river. So the kind monkey offered him some extra rose apples to take home to his wife. The crocodile’s wife loved the rose apples and made her husband promise to get her some every day.
++
++Meanwhile, the friendship between the monkey and the crocodile deepened as they spent more and more time together. The crocodile’s wife started getting jealous. She wanted to put an end to this friendship. So she pretended that she could not believe that her husband could be friends with a monkey. Her husband tried to convince her that he and the monkey shared a true friendship. The crocodile’s wife thought to herself that if the monkey lived on a diet of rose monkeys, his flesh would be very sweet. So she asked the crocodile to invite the monkey to their house.
++
++The crocodile was not happy about this. He tried to make the excuse that it would be difficult to get the monkey across the river. But his wife was determined to eat the monkey’s flesh. So she thought of a plan. One day, she pretended to be very ill and told the crocodile that the doctor said that she would only recover if she ate a monkey’s heart. If her husband wanted to save her life, he must bring her his friend’s heart.
+\ No newline at end of file
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git checkout master
+Switched to branch 'master'
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git remote add origin https://github.com/Ashvik2008/Class-67.git
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>git push origin master
+Select an authentication method for 'https://github.com/':
+  1. Web browser (default)
+  2. Personal access token
+option (enter for default): 1
+info: please complete authentication in your browser...
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 977 bytes | 325.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Ashvik2008/Class-67.git
+ * [new branch]      master -> master
+
+C:\Users\buzzt\Desktop\Class 67\MyStory>
